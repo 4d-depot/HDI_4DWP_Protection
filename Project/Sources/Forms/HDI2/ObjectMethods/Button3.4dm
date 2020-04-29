@@ -1,0 +1,12 @@
+ALL RECORDS:C47([SAMPLES:3])
+WParea:=WP New:C1317([SAMPLES:3]wp:2)
+
+
+OBJECT SET VISIBLE:C603(*;"Step1";True:C214)
+OBJECT SET VISIBLE:C603(*;"Step2";False:C215)
+OBJECT SET VISIBLE:C603(*;"Step3";False:C215)
+
+OBJECT SET VISIBLE:C603(*;"Note@";False:C215)
+
+Form:C1466.documentProectionOff:=1
+Form:C1466.documentProectionOn:=0

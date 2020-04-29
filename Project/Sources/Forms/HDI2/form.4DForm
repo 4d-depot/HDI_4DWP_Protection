@@ -1,0 +1,372 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMinHeight": 600,
+	"width": 1120,
+	"height": 800,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 1080,
+					"height": 760,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TabControl",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Infos",
+						"Demo"
+					],
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"btnTrace": {
+					"type": "checkbox",
+					"top": 741,
+					"left": 780,
+					"width": 183,
+					"height": 22,
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSource": "Form:C1466.trace",
+					"text": "Trace code",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"btnHtml": {
+					"type": "button",
+					"top": 741,
+					"left": 40,
+					"width": 180,
+					"height": 23,
+					"sizingY": "move",
+					"text": "Export to HTML",
+					"focusable": false,
+					"method": "ObjectMethods/btnHtml.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button": {
+					"type": "button",
+					"top": 741,
+					"left": 867,
+					"width": 95,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Demo",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 80,
+					"left": 60,
+					"width": 740,
+					"height": 140,
+					"textAlign": "left",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "In many cases, documents can be used as pre-filled forms.\r\rThe main part of the document is not enterable except for certain entry areas like name, adress, comments, etc."
+				},
+				"Text4": {
+					"type": "text",
+					"top": 280,
+					"left": 330,
+					"width": 740,
+					"height": 110,
+					"sizingX": "move",
+					"textAlign": "right",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "In other cases, the document is fully enterable except for areas that must be present and unchanged."
+				},
+				"Text6": {
+					"type": "text",
+					"top": 440,
+					"left": 60,
+					"width": 740,
+					"height": 210,
+					"sizingX": "move",
+					"textAlign": "left",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "Thanks to a new \"wk protected\" attribute, you can decide which parts of your document are enterable or protected.\r\rOnce this is done, use the \"wk protection enabled\" document attribute to activate protection settings and forbid any further modification of the protected parts."
+				}
+			}
+		},
+		{
+			"objects": {
+				"WParea": {
+					"type": "write",
+					"top": 70,
+					"left": 40,
+					"width": 660,
+					"height": 650,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea",
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"zoom": 100,
+					"showPageFrames": true,
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 75,
+					"left": 780,
+					"width": 280,
+					"height": 80,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "This document is not protected yet.\r\rThe goal is to protect the entire document with the exception of specific entry areas."
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Set protection",
+					"top": 245,
+					"left": 780,
+					"width": 280,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Remove protection",
+					"top": 430,
+					"left": 780,
+					"width": 280,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"Note1": {
+					"type": "text",
+					"top": 275,
+					"left": 810,
+					"width": 250,
+					"height": 37,
+					"sizingX": "move",
+					"fontWeight": "normal",
+					"text": "Note: Grey background added for visual purposes only.",
+					"stroke": "#808080",
+					"visibility": "hidden"
+				},
+				"Note2": {
+					"type": "text",
+					"top": 455,
+					"left": 810,
+					"width": 250,
+					"height": 37,
+					"sizingX": "move",
+					"fontWeight": "normal",
+					"text": "Note: White background added for visual purposes only.",
+					"stroke": "#808080",
+					"visibility": "hidden"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Reset All",
+					"top": 699,
+					"left": 780,
+					"width": 280,
+					"height": 21,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"Step1": {
+					"type": "picture",
+					"top": 235,
+					"left": 720,
+					"width": 40,
+					"height": 40,
+					"picture": "/RESOURCES/Images/ArrowRight.gif",
+					"pictureFormat": "scaled",
+					"visibility": "visible",
+					"sizingX": "move"
+				},
+				"Step2": {
+					"type": "picture",
+					"top": 418,
+					"left": 720,
+					"width": 40,
+					"height": 40,
+					"picture": "/RESOURCES/Images/ArrowRight.gif",
+					"pictureFormat": "scaled",
+					"visibility": "hidden",
+					"sizingX": "move"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 185,
+					"left": 780,
+					"width": 280,
+					"height": 60,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "Even though most of the document will not be modifiable, let's set the protected attribute to all parts of the document!"
+				},
+				"Line": {
+					"type": "line",
+					"top": 185,
+					"left": 770,
+					"width": 0,
+					"height": 120,
+					"strokeWidth": 2,
+					"startPoint": "topLeft",
+					"sizingX": "move"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 355,
+					"left": 780,
+					"width": 280,
+					"height": 70,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "Now, let's define the parts that can be modified.\rClick or select the parts in yellow and remove the protection."
+				},
+				"Line1": {
+					"type": "line",
+					"top": 355,
+					"left": 770,
+					"width": 0,
+					"height": 130,
+					"strokeWidth": 2,
+					"startPoint": "topLeft",
+					"sizingX": "move"
+				},
+				"Step3": {
+					"type": "picture",
+					"top": 600,
+					"left": 720,
+					"width": 40,
+					"height": 40,
+					"picture": "/RESOURCES/Images/ArrowRight.gif",
+					"pictureFormat": "scaled",
+					"visibility": "hidden",
+					"sizingX": "move"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 525,
+					"left": 780,
+					"width": 280,
+					"height": 60,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "Finally, enable the document-level protection so the settings above are taken into account."
+				},
+				"Line2": {
+					"type": "line",
+					"top": 525,
+					"left": 770,
+					"width": 0,
+					"height": 120,
+					"strokeWidth": 2,
+					"startPoint": "topLeft",
+					"sizingX": "move"
+				},
+				"Radio Button": {
+					"type": "radio",
+					"text": "Document protection disabled",
+					"top": 586,
+					"left": 780,
+					"width": 280,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.documentProectionOff",
+					"radioGroup": "DocumentProtection",
+					"method": "ObjectMethods/Radio Button.4dm",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"Radio Button1": {
+					"type": "radio",
+					"text": "Document protection enabled",
+					"top": 610,
+					"left": 780,
+					"width": 280,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.documentProectionOn",
+					"radioGroup": "DocumentProtection",
+					"method": "ObjectMethods/Radio Button1.4dm",
+					"sizingX": "move",
+					"focusable": false
+				},
+				"Button4": {
+					"type": "button",
+					"text": "BLOG sample",
+					"top": 810,
+					"left": 948,
+					"width": 174,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button4.4dm",
+					"sizingX": "move",
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}
